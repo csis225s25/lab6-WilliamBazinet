@@ -19,11 +19,14 @@ class GraphicsPanel extends JPanel {
         // first, we should call the paintComponent method we are
         // overriding in JPanel
         super.paintComponent(g);
-
+        String hello = "Hello, Java Graphics World!";
+        
         // the Graphics object passed to this method has many methods
         // we can use to draw in the area of the panel, one of which
         // allows us to draw a String at a given x,y position
-        g.drawString("Hello, Java Graphics World!", 0, 20);
+        
+        
+        g.drawString(hello, getWidth()/2 - hello.length() *2 - hello.length()/2, getHeight()/2);
     }
 }
 
@@ -46,6 +49,7 @@ public class HelloGraphics implements Runnable {
         frame.add(panel);
 
         // display the window we've created
+        
         frame.pack();
         frame.setVisible(true);
     }
