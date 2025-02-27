@@ -7,11 +7,11 @@ import javax.swing.*;
  * @version Spring 2025
  * 
  */
-class GraphicsPanel extends JPanel{
+class GPan extends JPanel{
     @Override 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        g.drawArc(8, 42, 73, 45, 84, 12);
+        g.drawArc(100, 42, 100, 100000, 84, 12);
     }
 }
 public class ArtProject implements Runnable {
@@ -29,7 +29,7 @@ public class ArtProject implements Runnable {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // construct JPanel with a custom paintComponent method
-        JPanel panel = new GraphicsPanel();
+        JPanel panel = new GPan();
         frame.add(panel);
 
         // display the window we've created
